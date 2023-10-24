@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {CssBaseline, ThemeProvider} from "@mui/material";
+import theme from "./theme";
 
 import ListTemplate from "./ListTemplate";
 import books from "./books";
@@ -30,6 +32,20 @@ import StateNestImmer from "./StateNestImmer";
 import StateTodo from "./StateTodo";
 import FormBasic from "./FormBasic";
 import FormYup from "./FormYup";
+import LazyBasic from "./LazyBasic";
+import SuspenseSimple from "./SuspenseSimple";
+import SuspenseResult from "./SuspenseResult";
+import ProfilerBasic from "./ProfilerBasic";
+import StyledBasic from "./StyledBasic";
+import StyledComp from "./StyledComp";
+import PortalBasic from "./PortalBasic";
+import ErrorRetryRoot from "./ErrorRetryRoot";
+import ErrorEventRoot from "./ErrorEventRoot";
+import MaterialBasic from "./MaterialBasic";
+import MaterialDrawer from "./MaterialDrawer";
+import MaterialGrid from "./MaterialGrid";
+import MaterialMode from "./MaterialMode";
+import FormMui from "./FormMui";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -57,7 +73,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 root.render(
-  <FormYup />
+    // <ThemeProvider theme={theme}>
+    //     <CssBaseline/>
+    //     <MaterialBasic/>
+    // </ThemeProvider>
+    <FormMui />
 );
 
 reportWebVitals();
