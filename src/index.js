@@ -52,6 +52,16 @@ import HookEffect from "./HookEffect";
 import HookRef from "./HookRef";
 import HookRefForward from "./HookRefForward";
 import HookCallbackRef from "./HookCallbackRef";
+import HookReducer from "./HookReducer";
+import HookReducerUp from "./HookReducerUp";
+import HookReducerInit from "./HookReducerInit";
+import HookContext from "./HookContext";
+import MyThemeProvider from "./MyThemeProvider";
+import HookThemeButton from "./HookThemeButton";
+import RecoilCounter from "./RecoilCounter";
+import {RecoilRoot} from "recoil";
+import RecoilTodo from "./RecoilTodo";
+import RecoilTodoUp from "./RecoilTodoUp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -79,11 +89,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // )
 
 root.render(
-    // <ThemeProvider theme={theme}>
-    //     <CssBaseline/>
-    //     <MaterialBasic/>
-    // </ThemeProvider>
-    <HookCallbackRef />
+    <RecoilRoot >
+        <RecoilTodoUp />
+    </RecoilRoot>
+    // <HookContext />
 );
 
 reportWebVitals();
